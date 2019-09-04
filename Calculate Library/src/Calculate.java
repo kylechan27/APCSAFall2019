@@ -32,7 +32,24 @@ public class Calculate {
 		return (degrees*3.14159/180);
 	}
 	//A call to discriminant provides the coefficents of a quadratic equation in standard form (a,b, and c) and returns the value of the discriminant.
-	public static double discriminant(double a, double b, double c) {
-		return (-(b*b)-4*a*c);
+	public static double discriminant(double number1, double number2, double number3) {
+		return (-(number2*number2)-(4*number1*number3));
+	}
+	//A call toImproperFrac converts mixed number (with its pieces provided separately in the order whole number, numerator, then denominator) into an improper fraction.
+	//The method accepts a three intergers and returns a string.
+	public static String toImproperFrac(int number1, int number2, int number3) {
+		return ((number1*number3+number1)/number3 + " ");
+}
+	//A call toMixedNum converts an improper fraction (with its pieces provided separately in the order numerator the denominator) into a mixed number.
+	// The method accepts a two intergers and returns a String. 
+	public static String toMixedNum(int number1, int number2) {
+		return ((number1/number2) +"_" +number1%number2 + "//" + number2);
+	}
+	//A call foil converts a binomial multiplication of the form (ax+b)(cx+d) into a quadratic equation of the form ax^2+bx+c.
+	//The method accepts a four intergers and a String and then returns a String. 
+	public static String foil(int number1, int number2, int number3, int number4, String "variable") {
+		
+		\
+
 	}
 }
