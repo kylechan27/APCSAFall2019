@@ -43,13 +43,11 @@ public class Calculate {
 	//A call toMixedNum converts an improper fraction (with its pieces provided separately in the order numerator the denominator) into a mixed number.
 	// The method accepts a two intergers and returns a String. 
 	public static String toMixedNum(int number1, int number2) {
-		return ((number1/number2) +"_" +number1%number2 + "//" + number2);
+		return ((number1/number2) +" " +number1%number2 + "/" + number2);
 	}
 	//A call foil converts a binomial multiplication of the form (ax+b)(cx+d) into a quadratic equation of the form ax^2+bx+c.
 	//The method accepts a four intergers and a String and then returns a String. 
-	public static String foil(int number1, int number2, int number3, int number4, String "variable") {
-		
-		\
-
+	public static String foil(int number1, int number2, int number3, int number4, String variable) {
+		return ((number1*variable)*(number3*variable))+((number1*variable*number4)+(number3*varaible*number2))+(number2*number4);
 	}
 }
