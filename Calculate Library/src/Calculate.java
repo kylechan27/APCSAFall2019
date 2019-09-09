@@ -50,4 +50,6 @@ public class Calculate {
 	public static String foil(int a, int b, int c, int d, String x) {
 		return (a*c+"x^2 + "+(a*b + b*c) + "x + " +b*d);
 	}
+	//A call to isDivisibility determines whether or not one integer is evenly divisible by another. 
+	//The method accepts two integers and returns a boolean
 }
