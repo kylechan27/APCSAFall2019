@@ -51,5 +51,75 @@ public class Calculate {
 		return (a*c+"x^2 + "+(a*b + b*c) + "x + " +b*d);
 	}
 	//A call to isDivisibility determines whether or not one integer is evenly divisible by another. 
-	//The method accepts two integers and returns a boolean
+	//The method accepts two integers and returns a boolean.
+	public static boolean isDivisibleBy(int x, int y) {
+		if(x % y == 0) {
+			return true; 
+		}   else  {
+			return false;
+}
+	}
+	//A call to absValue returns the absolute value of the number passed.
+	//The method accepts a double and return a double.
+	public static double absValue(double x) {
+		if(x>=0) {
+			return x;
+		} else {
+			return x*-1;
+		}
+}
+	//A call to max returns the larger of the values passed.
+	//The method accepts two doubles and returns a double.
+	public static double max(double x, double y) {
+		if(x>y) {
+			return x;
+		} else {
+			return y;
+		}
+}
+	//Overload the max method.
+	//This one accepts three doubles and returns a double.
+	public static double max(double x, double y, double z) {
+		if(x>y && x>z) {
+			return x;
+		} else if (y>x && y>z) {
+			return y;
+		} else { 
+			return z;
+		}
+	}
+	//A call to min returns the smaller of the values passed. 
+	//The method accepts two integers an int. 
+	public static int min(int x, int y) {
+		if(x>y) {
+			return y;
+		} else {
+			return x;
+		}
+	}
+	//A call to round2 rounds a double correctly to 2 decimal places and return a double.
+	public static double round2(double x) {
+		x= (x*100); 
+		x= (x+.5);
+		x= (int)x;
+		x= (x/100);
+		x= (double)x;
+		return x;	
+	}
+	//A call to exponent raises a value to a positive integer power. 
+	//The method accepts a double and an integer and returns a double. 
+	public static double exponent(double num, int x) {
+	int i=1;
+	double result = num;
+	while (i !=x) {
+		result*= num;
+		i++;
+	}
+	return result;		
+	}
+	//A call to factorial returns the factorial of the value passed.
+	//The method accepts an integer and returns an interger. 
+	public static int factorial(int x) {
+		for()
+}	
 }
