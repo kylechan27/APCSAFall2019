@@ -130,6 +130,13 @@ public class Calculate {
 	//The method accepts an integer and returns a boolean. 
 	public static boolean isPrime(int x) {
 		
+	}
+	//A call to gcf finds the greatest common factor of two integers.
+	//The method accepts two positive integers and returns an integer.
+	public static int gcf(int x, int y) {
+		
+		
 		
 	}
+	
 }	
