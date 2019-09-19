@@ -128,8 +128,15 @@ public class Calculate {
 }
 	//A call to isPrime determines whether or not an integer is prime. 
 	//The method accepts an integer and returns a boolean. 
-	public static boolean isPrime(int x) {
-		
+	public static boolean isPrime(int num) { 
+		boolean answer = true;
+		for(int i=2; i<num; i++) {
+		boolean result= isDivisibleBy(num,i);
+		if(result==true); {
+		answer=false; 
+		}
+		}
+		result answer;
 	}
 	//A call to gcf finds the greatest common factor of two integers.
 	//The method accepts two positive integers and returns an integer.
