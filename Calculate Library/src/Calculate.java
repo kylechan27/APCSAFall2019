@@ -141,9 +141,17 @@ public class Calculate {
 	//A call to gcf finds the greatest common factor of two integers.
 	//The method accepts two positive integers and returns an integer.
 	public static int gcf(int x, int y) {
-		
-		
-		
+		int gcf = 1;
+		for (int i = 1; i <= x && i<= y; i++) {
+			if(isDivisibleBy(x,i) == true && isDivisibleBy(y,i) == true) {
+				gcf = i;
+			}
+		}
+		return gcf;
 	}
-	
+	//A call to sqrt returns an approximation of the square root of the value passed, rounded to two decimal places. 
+	//The method accepts a double and returns a double.
+	public static double sqrt (double num1, double num2) { 
+		while()
+	}
 }	
