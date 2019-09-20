@@ -136,7 +136,7 @@ public class Calculate {
 		answer=false; 
 		}
 		}
-		result answer;
+		return answer;
 	}
 	//A call to gcf finds the greatest common factor of two integers.
 	//The method accepts two positive integers and returns an integer.
