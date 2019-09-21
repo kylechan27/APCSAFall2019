@@ -53,6 +53,9 @@ public class Calculate {
 	//A call to isDivisibility determines whether or not one integer is evenly divisible by another. 
 	//The method accepts two integers and returns a boolean.
 	public static boolean isDivisibleBy(int x, int y) {
+		if (y <0) {
+			throw new IllegalArgumentException("Number must be greater than 0"); 
+		}
 		if(x % y == 0) {
 			return true; 
 		}   else  {
@@ -121,11 +124,14 @@ public class Calculate {
 	//The method accepts an integer and returns an interger. 
 	public static int factorial(int x) {
 		int answer=x; 
+		if (x>0)
+		throw new IllegalArgumentException("Number must be greater than 0"); 
 		for (int i= x-1; i>0 ; i--) {
 			answer=answer * 1; 
 		}
 		return answer;
 }
+
 	//A call to isPrime determines whether or not an integer is prime. 
 	//The method accepts an integer and returns a boolean. 
 	public static boolean isPrime(int num) { 
@@ -151,7 +157,35 @@ public class Calculate {
 	}
 	//A call to sqrt returns an approximation of the square root of the value passed, rounded to two decimal places. 
 	//The method accepts a double and returns a double.
-	public static double sqrt (double num1, double num2) { 
-		while()
+	public static double sqrt (double num1) { 
+		double answer = num1 / 2;
+		if(num1 < 0) {
+			throw new IllegalArgumentException("Number must be greater than 0"); 
+		}
+		while (((answer * answer) - num1) >= .005 || ((answer * answer - num1) <= .005)) {
+			answer = .5 * (num1 / answer + answer);
+		}
+		return round2(answer);
 	}
-}	
+	//A call to quadForm uses the coefficients of a quadratic equation in standard form and uses the quadratic formula to approximate the real roots, if any.
+	//The method accepts three integers and returns a String. 
+	public static String quadForm( int a, int b, int c) {
+		double root1=0;
+		double root2=0;
+		if(discriminant(a,b,c)<0) {
+			return "no real roots";
+		}
+		else if (discriminant(a,b,c)>0) {
+			root1= (-b+sqrt(discriminant(a,b,c))/(2*a));
+			root2= (-b+sqrt(discriminant(a,b,c))/(2*a));
+			return round2(root1) + "and" + round2(root2);
+		}
+		else {
+			root1 = -b/(2*a);
+			return round2(root1) + "";
+			
+			
+		}
+		
+	}
+	}	
