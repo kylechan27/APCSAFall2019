@@ -148,12 +148,16 @@ public class Calculate {
 	//The method accepts two positive integers and returns an integer.
 	public static int gcf(int x, int y) {
 		int gcf = 1;
-		for (int i = 1; i <= x && i<= y; i++) {
-			if(isDivisibleBy(x,i) == true && isDivisibleBy(y,i) == true) {
-				gcf = i;
-			}
+		double larger= max(x,y); 
+		double smaller= min(x,y);
+		for (int i = 1; i <= (int)larger; i++) {
+			if(isDivisibleBy((int)larger,i) == true) {
+					if(isDivisibleBy((int)smaller,i) == true) {
+						gcf = i;
+		}
 		}
 		return gcf;
+		}
 	}
 	//A call to sqrt returns an approximation of the square root of the value passed, rounded to two decimal places. 
 	//The method accepts a double and returns a double.
