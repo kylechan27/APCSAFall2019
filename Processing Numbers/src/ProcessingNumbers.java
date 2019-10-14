@@ -1,27 +1,40 @@
 import java.util.Scanner;
 public class ProcessingNumbers {
 private static final Scanner scanner = new Scanner(System.in);
-public static void main(String[] args) {
-	System.out.print("how many numbers?");
-	int numNums= scanner.nextInt();
-	int[] numbers = new int[numNums];
-	System.out.print("enter number:");
-	numbers[0] = scanner.nextInt();
-	for(int i=1; i<numNums;i++) {
-		System.out.print("enter number");
-		numbers[i] = scanner.nextInt();
-}
-		int smallest = numbers[0];
-		int biggest = numbers[0];
-		int biggestEven = -1;
-		int evenSum =0; 
-		for (int i: numbers) {
-			if(i<smallest) smallest=i;
-			if(i>biggest) biggest=i;
-			evenSum+= i;
-			if(i%2==0) {
-			 evenSum += i;
+public static void main(String[] args) {		
+			Scanner userInput = new Scanner(System.in);
+			System.out.println("How many numbers would you like to input?");
+			int run = userInput.nextInt();
+			int num = userInput.nextInt();
+			
+			int max = num;
+			int evenMax = -10000000;
+			int min = num;
+			int evenSum = 0;
+			if(num % 2 == 0) {
+				evenMax = num;
+				evenSum = num;
+			}		
+			for(int i = 0; i < run - 1; i++) {
+				int newNum = userInput.nextInt();
+				if(newNum < min) {
+					min = newNum;
+				} else if(newNum > max) {
+					max = newNum;
+				}
+				if(newNum % 2 == 0) {
+					evenSum += newNum;
+					if(newNum > evenMax) {
+						evenMax = newNum;
+						}
+					}
+				}
+			{
+				System.out.println("The smallest number is " + min);
+				System.out.println("The largest number is " + max);
+				System.out.println("The sum of the even numbers is " + evenSum);
+				System.out.println("The largest even number is " + evenMax);
+			}
 		}
-	}	
-}
-}
+	}
+
