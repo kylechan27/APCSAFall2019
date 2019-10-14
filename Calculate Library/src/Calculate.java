@@ -183,9 +183,6 @@ public class Calculate {
 		else {
 			root1 = -b/(2*a);
 			return round2(root1) + "";
-			
-			
+			}
 		}
-		
-	}
 	}	
