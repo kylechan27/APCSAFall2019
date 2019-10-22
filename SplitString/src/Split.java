@@ -23,12 +23,15 @@ public class Split {
 		//play around with String.split!
 
 		//What happens if you "I reallyreally likeapples".split("really") ?
+
 			String[] outputArray = "I like apples!".split(" ");
 			System.out.println( Arrays.toString(outputArray));
 			String[] outputArray2 = " really I really like really red apples!".split(" really ");
 			System.out.println( Arrays.toString(outputArray2));
-			String[] part1split = "applespineapplesbreadlettucetomatobaconmayohambreadcheese".split("bread");
-			System.out.println( Arrays.toString(part1split));
+			System.out.println(part1Method("bread"));
+			System.out.println(part1Method("breadham"));
+			System.out.println(part1Method("mayobread"));
+			
 			//Your task Part 1
 
 			/*Write a method that take in a string like
@@ -44,6 +47,9 @@ public class Split {
 			* What if it's a fancy sandwich with multiple pieces of bread?
 
 			*/
+			public static String part1Split(String sandwich) {
+				return;
+			}
 
 			//Your task pt 2:
 
@@ -60,12 +66,15 @@ public class Split {
 			* Again, what if it's a fancy sandwich with multiple pieces of bread?
 
 			*/
+			public static String part2Split(String sanwich) {
+
+
+			}
 
 	}
 
-	private static char[] part1split(String string) {
+	private static char[] part1Method(String string) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 }
