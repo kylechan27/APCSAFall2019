@@ -36,17 +36,17 @@ public class Calculate {
 		return (-(number2*number2)-(4*number1*number3));
 }
 	//A call toImproperFrac converts mixed number (with its pieces provided separately in the order whole number, numerator, then denominator) into an improper fraction.
-	//The method accepts a three intergers and returns a string.
+	//The method accepts a three integers and returns a string.
 	public static String toImproperFrac(int number1, int number2, int number3) {
 		return ((number1*number3+number1)/number3 + " ");
 }
 	//A call toMixedNum converts an improper fraction (with its pieces provided separately in the order numerator the denominator) into a mixed number.
-	// The method accepts a two intergers and returns a String. 
+	// The method accepts a two integers and returns a String. 
 	public static String toMixedNum(int number1, int number2) {
 		return ((number1/number2) +" " +number1%number2 + "/" + number2);
 }
 	//A call foil converts a binomial multiplication of the form (ax+b)(cx+d) into a quadratic equation of the form ax^2+bx+c.
-	//The method accepts a four intergers and a String and then returns a String. 
+	//The method accepts a four integers and a String and then returns a String. 
 	public static String foil(int a, int b, int c, int d, String x) {
 		return (a*c+"x^2 + "+(a*b + b*c) + "x + " +b*d);
 }
@@ -188,7 +188,6 @@ public class Calculate {
 			return round2(root1) + "";
 			
 			
-		}
-		
+		}	
 	}
-	}	
+}	
