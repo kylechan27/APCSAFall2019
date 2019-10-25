@@ -2,7 +2,7 @@ import java.util.Arrays;
 public class Split {
 
 	public static void main(String[] args) {
-		// Your task Part 0
+		// Your task Part 0.
 
 		//String.split();
 
@@ -24,32 +24,37 @@ public class Split {
 
 		//What happens if you "I reallyreally likeapples".split("really") ?
 
+		
+		//Your task Part 1
+
+		/*Write a method that take in a string like
+
+		* "applespineapplesbreadlettucetomatobaconmayohambreadcheese"
+
+		* describing a sandwich.
+
+		* Use String.split to split up the sandwich by the word "bread" and return what's in the middle of
+
+		* the sandwich and ignores what's on the outside
+
+		* What if it's a fancy sandwich with multiple pieces of bread?
+
+		*/
 			String[] outputArray = "I like apples!".split(" ");
 			System.out.println( Arrays.toString(outputArray));
 			String[] outputArray2 = " really I really like really red apples!".split(" really ");
 			System.out.println( Arrays.toString(outputArray2));
-			System.out.println(part1Method("bread"));
+			String[] part1Method= "applespineapplesbreadlettucetomatobaconmayohambreadcheese".split("bread");
+			System.out.println(Arrays.toString(part1Method));
+	}
+			/*System.out.println(part1Method("bread"));
 			System.out.println(part1Method("breadham"));
 			System.out.println(part1Method("mayobread"));
 			
-			//Your task Part 1
-
-			/*Write a method that take in a string like
-
-			* "applespineapplesbreadlettucetomatobaconmayohambreadcheese"
-
-			* describing a sandwich.
-
-			* Use String.split to split up the sandwich by the word "bread" and return what's in the middle of
-
-			* the sandwich and ignores what's on the outside
-
-			* What if it's a fancy sandwich with multiple pieces of bread?
-
-			*/
-			public static String part1Split(String sandwich) {
-				return;
-			}
+		
+			//public static String part1Split(String sandwich) {
+			//	return;
+			//}
 
 			//Your task pt 2:
 
@@ -66,15 +71,5 @@ public class Split {
 			* Again, what if it's a fancy sandwich with multiple pieces of bread?
 
 			*/
-			public static String part2Split(String sanwich) {
-
-
-			}
-
+		//	public static String part2Split(String sandwich) {
 	}
-
-	private static char[] part1Method(String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-}
