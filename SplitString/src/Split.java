@@ -46,6 +46,7 @@ public class Split {
 			System.out.println( Arrays.toString(outputArray2));
 			String[] part1Method= "applespineapplesbreadlettucetomatobaconmayohambreadcheese".split("bread");
 			System.out.println(Arrays.toString(part1Method));
+			
 	}
 			/*System.out.println(part1Method("bread"));
 			System.out.println(part1Method("breadham"));

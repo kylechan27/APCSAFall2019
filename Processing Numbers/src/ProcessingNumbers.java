@@ -34,7 +34,8 @@ public static void main(String[] args) {
 				System.out.println("The largest number is " + max);
 				System.out.println("The sum of the even numbers is " + evenSum);
 				System.out.println("The largest even number is " + evenMax);
+			
 			}
-		}
+			}
 	}
 
