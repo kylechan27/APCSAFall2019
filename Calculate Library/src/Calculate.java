@@ -4,11 +4,11 @@
  * August 29, 2019
  */
 public class Calculate {
-	// A call to square returns the square of the value passsed. The method accepts an integer and returns an integer.
+	// A call to square returns the square of the value passed. The method accepts an integer and returns an integer.
 	public static int square(int number) {
 		return number*number;
 }
-	//A call to cube returns the square of the value passsed. The method accepts an integer and returns an integer.
+	//A call to cube returns the square of the value passed. The method accepts an integer and returns an integer.
 	public static int cube(int number) {
 		return number*number*number;
 }
@@ -188,6 +188,6 @@ public class Calculate {
 			return round2(root1) + "";
 			
 			
-		}	
+		}
 	}
 }	
