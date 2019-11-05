@@ -1,3 +1,6 @@
+//Kyle Chan
+// APCS 3rd Period
+// November 3,2019
 package fracCalc;
 import java.util.Scanner;
 public class FracCalc {
@@ -13,7 +16,7 @@ public class FracCalc {
     		System.out.println(produceAnswer(expression));
     		System.out.println("Continue? Enter \"quit\" to quit and \"y\" to continue");
     		stop = console.nextLine();
- 	 	}
+    	}
     }
     
     // ** IMPORTANT ** DO NOT DELETE THIS FUNCTION.  This function will be used to test your code
