@@ -1,4 +1,4 @@
-//Kyle Chan
+// Kyle Chan
 // APCS 3rd Period
 // November 3,2019
 package fracCalc;
@@ -26,7 +26,7 @@ public class FracCalc {
     //      e.g. input ==> "1/2 + 3/4"
     //        
     // The function should return the result of the fraction after it has been calculated
-    //      e.g. return ==> "1_1/4"
+    //      e.g. return ==> "1_1/4"7
     public static String produceAnswer(String input) {
     // TODO: Implement this function to produce the solution to the input
     	 String[] fracOpFrac = input.split(" ");
