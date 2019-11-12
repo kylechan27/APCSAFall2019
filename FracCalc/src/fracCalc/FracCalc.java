@@ -29,10 +29,46 @@ public class FracCalc {
     //      e.g. return ==> "1_1/4"7
     public static String produceAnswer(String input) {
     // TODO: Implement this function to produce the solution to the input
-    	 String[] fracOpFrac = input.split(" ");
-         return fracOpFrac[2];
+    	String temp =input;
+    	String operand1= temp.substring(0, temp.indexOf(' '));
+    	temp= temp.substring(temp.indexOf(' ')+1);
+    	String operator = temp.substring(0, temp.indexOf(' '));
+    	temp= temp.substring(temp.indexOf(' ')+1);
+    	String operand2 = temp;
+    	
+    	String opWhole = findWhole(operand2);
+    	String opNum = findNum(operand2);
+    	String opDenom = findDenom(operand2);
+    	
+    	String Answer= "whole:" + opWhole + " numerator:"+ opNum + " denominator:" +opDenom;
+    	return Answer;
+    
     }
 
     // TODO: Fill in the space below with any helper methods that you think you will need
+    public static String findWhole(String str) {
+    	if (str.contains("_")) {
+    		return str.substring(0, str.indexOf('_'));
+    	}else if (str.contains("/")) {
+    		return "0";
+    	}else return str;
+    }
     
+    public static String findNum(String str){
+    	if (str.contains("_")) {
+    		return str.substring(str.indexOf('_')+1, str.indexOf('/'));
+    	}else if (str.contains("/")){
+    		return str.substring(0, str.indexOf('/'));
+    	}else {
+    		return "0";
+    	}
+    }
+    		
+    public static String findDenom(String str) {
+    	if(str.contains("/")) {
+    		return str.substring(str.indexOf("/")+1);
+    	}else {
+    		return "1";
+    	}    	
+    }
 }
