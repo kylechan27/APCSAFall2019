@@ -1,7 +1,6 @@
 //Kyle Chan
 //Period 3
-//November 19, 2019
-
+//November 15, 2019
 package fracCalc;
 import java.util.*;
 
@@ -11,17 +10,16 @@ public class FracCalc {
     	
     	Scanner userInput = new Scanner(System.in);
     	
-    	String end = "quit";
+    	String quit = "quit";
     	System.out.println("Enter an equation with spaces between numbers and the operator...");
     	String problem = userInput.nextLine();
     	
-    	while(!end.equals(problem)) {
+    	while(!quit.equals(problem)) {
     		System.out.println(produceAnswer(problem));
     		System.out.println("type \"quit\" to exit or type the next equation to continue...");
     		problem = userInput.nextLine();
     	}
     	userInput.close();
- 
         // TODO: Read the input from the user and call produceAnswer with an equation
     	//takes in the inputed equation and calls different methods to produce the answer
     	//uses a while loop and asks user to continue or quit
@@ -39,11 +37,11 @@ public class FracCalc {
     public static String produceAnswer(String input) { 
   
     	String[] splitEquation = input.split(" ");
-    	int[] firstOperand = toFraction(splitEquation[0]);
-    	int[] secondOperand = toFraction(splitEquation[2]);
+    	int[] firstOperand = fraction(splitEquation[0]);
+    	int[] secondOperand = fraction(splitEquation[2]);
     	String operator = splitEquation[1];
     	int[] impropFrac = math(firstOperand,operator,secondOperand);
-    	int[]answer = toMixedNum(impropFrac[0], impropFrac[1]);
+    	int[]answer = mixedNum(impropFrac[0], impropFrac[1]);
     	
     	if (Math.abs(answer[0]) > 0) {
     		if (answer[1] == 0) {
@@ -65,7 +63,7 @@ public class FracCalc {
         // TODO: Implement this function to produce the solution to the input
     }
     // TODO: Fill in the space below with any helper methods that you think you will need
-    public static int[] toFraction(String operand) {
+    public static int[] fraction(String operand) {
     	int[] intFrac = {0,0,1};
     	
     	if(operand.contains("_")) {
@@ -82,12 +80,12 @@ public class FracCalc {
     		intFrac[0] = Integer.parseInt(operand);
     	}
     	
-		return toImproperFrac(intFrac);	
+		return improperFrac(intFrac);	
 		//splits operand into whole number, numerator, and denominator and stores it into am array
 		//uses toImproperFrac to convert mixed numbers into improper fractions
     }  
     
-	public static int[] toImproperFrac(int[]frac) {
+	public static int[] improperFrac(int[]frac) {
 		if (frac[0] < 0) {
 			int negSign = -1;
 			frac[0] *= -1;
@@ -132,12 +130,11 @@ public class FracCalc {
 		//determines what math to use and calculates the equation, result is an improper fraction
     }
   
-    public static int[] toMixedNum(int num, int den) {
+    public static int[] mixedNum(int num, int den) {
     	int[] mixNum = {0,0,1};
     	
     	int whole = num/den;
     	mixNum[0] = whole;
-    	
     	if (num != 0) {
     		num = Math.abs(num) % den;
     		int factor = gcf(num, Math.abs(den));
